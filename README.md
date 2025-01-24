@@ -45,6 +45,8 @@ Ensure the following are installed:
 
 3. Run the application:
    ```bash
+   python semantic_chunking.py
+   python recursive_chunking.py
    python health_chatbot.py
    ```
 
