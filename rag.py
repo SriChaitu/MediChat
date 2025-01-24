@@ -5,15 +5,9 @@ import json
 from time import sleep
 from groq import Groq
 
-palm.configure(api_key='AIzaSyAIHxQwpth7S_xTpf7yUhmvp3ZmCkxUsto')
+palm.configure(api_key=YOUR_KEY)
 
-# client= Groq(api_key='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')
-# client= Groq(api_key='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')
-# client= Groq(api_key='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')
-# client= Groq(api_key='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')
-# client= Groq(api_key='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')
-# client= Groq(api_key='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')
-client= Groq(api_key='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')
+client= Groq(api_key=YOUR_KEY)
 
 chroma_client = chromadb.PersistentClient(path="RAG_S")
 db = chroma_client.get_collection(name="collection_S")
