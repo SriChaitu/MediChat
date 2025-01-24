@@ -2,11 +2,11 @@ import google.generativeai as palm
 import chromadb
 from groq import Groq
 
-palm.configure(api_key='AIzaSyAIHxQwpth7S_xTpf7yUhmvp3ZmCkxUsto')
+palm.configure(api_key=YOUR_KEY)
 
 chroma_client = chromadb.PersistentClient(path="RAG_S")
 db = chroma_client.get_collection(name="collection_S")
-client= Groq(api_key='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')
+client= Groq(api_key=YOUR_KEY)
 # anatomy_text_example = db.query(query_texts=["What is Vasectomy"], n_results=5)['documents'][0]
 # print(anatomy_text_example[0])
 
@@ -22,7 +22,7 @@ def generate_answer(db,query):
     obtained_chunks = db.query(query_texts=[query], n_results=2)['documents'][0]
     merged_chunk ="".join(obtained_chunks)
     merged_chunk = merged_chunk.replace("'", "").replace('"', "").replace("\n", " ")
-    prompt = ("""You are a medical assistant bot. End yuor sentence with 'Stay healthy!!' You need to answer the following question using text from the reference passage which is given below the question, just use the information from the passage and summarize in your own words, dont use sentences like 'This passage tells that'
+    prompt = ("""You are a medical assistant bot. End your sentence with 'Stay healthy!!' You need to answer the following question using text from the reference passage which is given below the question, just use the information from the passage and summarize in your own words, dont use sentences like 'This passage tells that'
                 QUESTION: '{query}' 
                 PASSAGE: '{merged_chunk}'
                 Here is the example to the question and the way you should answer:
