@@ -7,8 +7,7 @@ palm.configure(api_key=YOUR_KEY)
 chroma_client = chromadb.PersistentClient(path="RAG_S")
 db = chroma_client.get_collection(name="collection_S")
 client= Groq(api_key=YOUR_KEY)
-# anatomy_text_example = db.query(query_texts=["What is Vasectomy"], n_results=5)['documents'][0]
-# print(anatomy_text_example[0])
+
 
 # model = palm.GenerativeModel('gemini-1.5-flash')
 model2= palm.GenerativeModel('gemini-1.5-pro')
