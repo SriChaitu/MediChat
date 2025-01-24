@@ -30,4 +30,35 @@ The project is built on the MedQA dataset, which includes extensive question-ans
 3. **Evaluation**:  
    - Tested on clinical scenarios to ensure accuracy and reliability.  
    - Continuous evaluation using domain-specific metrics.  
+## Usage
+### Prerequisites
+Ensure the following are installed:
+- Python 3.8+
 
+### Running the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SriChaitu/MediChat.git
+   cd MediChat
+   ```
+2. Replace with your API KEYS:
+
+3. Run the application:
+   ```bash
+   python health_chatbot.py
+   ```
+
+## Future Scope
+- Expand dataset coverage to include non-English medical texts.
+- Implement multi-modal input for images and text.
+- Deploy the system as a web or mobile application.
+
+## Contributors
+- **Sri Chaitanya Kattamuri** - Final-year undergraduate, IIT Guwahati
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgments
+- Thanks to Prof. Natesan Srinivasan(IIT Guwahati) for academic support.
+- Hugging Face for providing open-source tools.
